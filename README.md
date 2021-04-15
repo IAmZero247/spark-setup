@@ -15,11 +15,11 @@
 	 
 2.  Set env Variable
     
-	  --SPARK_HOME=C:\Softwares\Spark3
+      - SPARK_HOME=C:\Softwares\Spark3
 
-      --HADOOP_HOME=C:\Softwares\hadoop27
+      - HADOOP_HOME=C:\Softwares\hadoop27
 
-      --PYSPARK_PYTHON=C:\Softwares\anaconda3\python    
+      - PYSPARK_PYTHON=C:\Softwares\anaconda3\python    
 
 3.  REPL setup For Scala 
 
