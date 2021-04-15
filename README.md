@@ -35,16 +35,17 @@
 	  
 5.  PyCharm IDE 
 
-      -- Open sample project in repo 01-HelloSpark 
+      * Open sample project in repo 01-HelloSpark 
 	   
-	  -- C:\Demo\01-HelloSpark
+	  * C:\Demo\01-HelloSpark
 	  
-	  --  Preferences > Setting > Project: 01-HelloSpark > Python Interpretor 
+	  * Preferences > Setting > Project: 01-HelloSpark > Python Interpretor 
 	  
-	        * Set Python Interpretor to No Interpretor (if pycharm has already automatically picked up some interpretor)
+	      - Set Python Interpretor to No Interpretor (if pycharm has already automatically picked up some interpretor)
 		   
-		    *  Start configuring new one  >>>  Add >  Choose Conda Enviroment .
-		         ```
+		  -  Start configuring new one  >>>  Add >  Choose Conda Enviroment .
+		      
+			  ```
 				 *  Location -> C:\Softwares\anaconda3\envs\my_pycharm
 			     *  Py Version -> 3.8
 			     *  Conda Executable -> C:\Softwares\anaconda3\Scripts\conda.exe
@@ -59,19 +60,19 @@
 			         -- Setting > Project: 01-HelloSpark > Python Interpretor> + (Click Plus icon)
 				     -- type "pyspark" (choose latest version) and click the install button 
 				   
-	            ```
-	  --  Open HelloSpark.py and Try Run it 
+	          ```
+	  *  Open HelloSpark.py and Try Run it 
 	      
 		  (RUN ENV -> Config as in below) 
 		 
 	
-      -- Setting logs
+      * Setting Logs
            
-		   * open C:\Softwares\Spark3\conf and rename spark-defaults.config.template -> spark-defaults.config
+		   * Open C:\Softwares\Spark3\conf and rename spark-defaults.config.template -> spark-defaults.config
 		   
-		   * copy paste content from repo conf/spark-defaults.config 
+		   * Copy paste content from repo conf/spark-defaults.config 
 		   
-		   * run again.
+		   * Run again.
 
 6.  Jupyter Notebook 
 
@@ -83,9 +84,7 @@
 	       
 		    python -m pip install findspark
 			
-	  3. Open jupyter notebook 
-          
-          * create new notebook 
+	  3. Open jupyter notebook and create new notebook 
 
              import findspark 
 			 findspark.init()
