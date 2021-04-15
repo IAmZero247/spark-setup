@@ -93,7 +93,7 @@
 			
 	  3. Open jupyter notebook and create new notebook 
 
-                   import findspark 
+               import findspark 
 			 findspark.init()
 			 
 			 
