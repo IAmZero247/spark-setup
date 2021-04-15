@@ -1,9 +1,18 @@
 # spark-setup
 
 
-1. https://spark.apache.org/downloads.html
+1.  https://adoptopenjdk.net/
 
-     ```
+      ```
+	  1. Java -version
+	  2. Javac -version 
+	  
+	  ```
+
+
+2.  https://spark.apache.org/downloads.html
+
+      ```
 	 
 	 Spark-release ---> 3.1.1
      
@@ -11,29 +20,37 @@
 	 
 	 Download ---> spark-3.1.1-bin-hadoop2.7.tgz
 	 
-	 Use 7zip to extract in windows 
+	 Use 7zip to extract in windows
 	 
-2.  Set env Variable
+      ```	 
+	 
+3.  Set env Variable
     
       - SPARK_HOME=C:\Softwares\spark3
 
       - HADOOP_HOME=C:\Softwares\hadoop27
 
-      - PYSPARK_PYTHON=C:\Softwares\anaconda3\python    
+      - PYSPARK_PYTHON=C:\Softwares\anaconda3\python  
 
-3.  REPL setup For Scala 
+      ```
+	  echo %SPARK_HOME%
+	  echo %HADOOP_HOME%
+	  echo %PYSPARK_PYTHON%
+      ```	  
+
+4.  REPL setup For Scala 
 
       Open cmd and type 
 
       `spark-shell`
 
-4.  REPL setup For Pyspark  
+5.  REPL setup For Pyspark  
     
       Open cmd and type 
 
       `pyspark`	
 	  
-5.  PyCharm IDE 
+6.  PyCharm IDE 
 
       * Open sample project in repo 01-HelloSpark 
 	   
@@ -81,7 +98,7 @@
 		   * Run again.
 		    
 
-6.  Jupyter Notebook 
+7.  Jupyter Notebook 
 
       ```
 	   
