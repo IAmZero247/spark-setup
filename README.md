@@ -15,7 +15,7 @@
 	 
 2.  Set env Variable
     
-      - SPARK_HOME=C:\Softwares\Spark3
+      - SPARK_HOME=C:\Softwares\spark3
 
       - HADOOP_HOME=C:\Softwares\hadoop27
 
@@ -74,7 +74,7 @@
 	
       * Setting Logs
            
-		   * Open C:\Softwares\Spark3\conf and rename spark-defaults.config.template -> spark-defaults.config
+		   * Open C:\Softwares\spark3\conf and rename spark-defaults.config.template -> spark-defaults.config
 		   
 		   * Copy paste content from repo conf/spark-defaults.config 
 		   
@@ -85,7 +85,7 @@
 
       ```
 	   
-	  1. Set env --SPARK_HOME=C:\Softwares\Spark3 
+	  1. Set env --SPARK_HOME=C:\Softwares\spark3 
 	  
 	  2. Open Anaconda prompt and install find spark 
 	       
