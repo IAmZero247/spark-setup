@@ -5,13 +5,13 @@
 
      ```
 	 
-	 spark- release ---> 3.1.1
+	 Spark-release ---> 3.1.1
      
-	 choose a build package ---> Prebuild for Apache Hadoop 2.7
+	 Choose a build package ---> Prebuild for Apache Hadoop 2.7
 	 
-	 download ---> spark-3.1.1-bin-hadoop2.7.tgz
+	 Download ---> spark-3.1.1-bin-hadoop2.7.tgz
 	 
-	 use 7zip to extract in windows 
+	 Use 7zip to extract in windows 
 	 
 2.  Set env Variable
     
@@ -23,13 +23,13 @@
 
 3.  REPL setup For Scala 
 
-      open cmd and type 
+      Open cmd and type 
 
       `spark-shell`
 
 4.  REPL setup For Pyspark  
     
-      open cmd and type 
+      Open cmd and type 
 
       `pyspark`	
 	  
@@ -49,21 +49,23 @@
 				 *  Location -> C:\Softwares\anaconda3\envs\my_pycharm
 			     *  Py Version -> 3.8
 			     *  Conda Executable -> C:\Softwares\anaconda3\Scripts\conda.exe
-			     *  enable make available for all the projects 
+			     *  Enable make available for all the projects 
 			   
 			                      Or 
 			   
-			     * Choose Existing env (if any)
+			     * Choose existing env (if any)
 			   
-			     * Now Add pySpark dependency 
+			     * Now add pySpark dependency 
 			   
 			         -- Setting > Project: 01-HelloSpark > Python Interpretor> + (Click Plus icon)
-				     -- type "pyspark" (choose latest version) and click the install button 
+				     -- Type "pyspark" (choose latest version) and click the install button 
 				   
 	          ```
 	  *  Open HelloSpark.py and Try Run it 
 	      
 		  (RUN ENV -> Config as in below) 
+		  
+		  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
 		 
 	
       * Setting Logs
@@ -73,6 +75,8 @@
 		   * Copy paste content from repo conf/spark-defaults.config 
 		   
 		   * Run again.
+		   
+		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
 
 6.  Jupyter Notebook 
 
