@@ -65,7 +65,7 @@
 	      
 		  (RUN ENV -> Config as in below) 
 		  
-		  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
+		  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_helloworld_run_arguments.jpg?raw=true)
 		 
 	
       * Setting Logs
