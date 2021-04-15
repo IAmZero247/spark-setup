@@ -4,8 +4,8 @@
 1.  https://adoptopenjdk.net/
 
       ```
-	  1. Java -version
-	  2. Javac -version 
+	  1. java -version
+	  2. javac -version 
 	  
 	  ```
 
