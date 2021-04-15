@@ -59,8 +59,11 @@
 			   
 			         -- Setting > Project: 01-HelloSpark > Python Interpretor> + (Click Plus icon)
 				     -- Type "pyspark" (choose latest version) and click the install button 
-				   
+					  
 	          ```
+			  
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
+			  
 	  *  Open HelloSpark.py and Try Run it 
 	      
 		  (RUN ENV -> Config as in below) 
@@ -75,8 +78,7 @@
 		   * Copy paste content from repo conf/spark-defaults.config 
 		   
 		   * Run again.
-		   
-		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
+		    
 
 6.  Jupyter Notebook 
 
