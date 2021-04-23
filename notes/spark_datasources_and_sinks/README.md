@@ -109,12 +109,12 @@
 			
 			
 			flightTimeCsvDF = spark.read \
-								.format("csv") \
-								.option("header", "true") \
-								.schema(flightSchemaStruct) \
-								.option("mode", "FAILFAST") \
-								.option("dateFormat", "M/d/y") \                     # -> we need to specify the date or datetime format
-								.load("data/flight*.csv")
+						.format("csv") \
+						.option("header", "true") \
+						.schema(flightSchemaStruct) \
+						.option("mode", "FAILFAST") \
+						.option("dateFormat", "M/d/y") \                     # -> we need to specify the date or datetime format
+						.load("data/flight*.csv")
 								
 		    
 			logger.info("CSV Schema:" + flightTimeCsvDF.schema.simpleString())
@@ -122,15 +122,15 @@
         2. DDL String 
 
             flightSchemaDDL = """FL_DATE DATE, OP_CARRIER STRING, OP_CARRIER_FL_NUM INT, ORIGIN STRING, 
-								ORIGIN_CITY_NAME STRING, DEST STRING, DEST_CITY_NAME STRING, CRS_DEP_TIME INT, DEP_TIME INT, 
-								WHEELS_ON INT, TAXI_IN INT, CRS_ARR_TIME INT, ARR_TIME INT, CANCELLED INT, DISTANCE INT"""	
+				ORIGIN_CITY_NAME STRING, DEST STRING, DEST_CITY_NAME STRING, CRS_DEP_TIME INT, DEP_TIME INT, 
+				WHEELS_ON INT, TAXI_IN INT, CRS_ARR_TIME INT, ARR_TIME INT, CANCELLED INT, DISTANCE INT"""	
 
 
             flightTimeJsonDF = spark.read \
-								.format("json") \
-								.schema(flightSchemaDDL) \
-								.option("dateFormat", "M/d/y") \
-								.load("data/flight*.json")
+				.format("json") \
+				.schema(flightSchemaDDL) \
+				.option("dateFormat", "M/d/y") \
+				.load("data/flight*.json")
 
             logger.info("Parquet Schema:" + flightTimeParquetDF.schema.simpleString())								
 
