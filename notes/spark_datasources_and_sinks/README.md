@@ -1,130 +1,143 @@
 # spark-setup
 
 
-1.  https://adoptopenjdk.net/
+1.  Spark Sources - External And Internal 
 
-      ```
-	  1. Java -version
-	  2. Javac -version 
-	  
-	  ```
-
-
-2.  https://spark.apache.org/downloads.html
-
-      ```
-	 
-	 Spark-release ---> 3.1.1
-     
-	 Choose a build package ---> Prebuild for Apache Hadoop 2.7
-	 
-	 Download ---> spark-3.1.1-bin-hadoop2.7.tgz
-	 
-	 Use 7zip to extract in windows
-	 
-      ```	 
-	 
-3.  Set env Variable
-    
-      - SPARK_HOME=C:\Softwares\spark3
-
-      - HADOOP_HOME=C:\Softwares\hadoop27
-
-      - PYSPARK_PYTHON=C:\Softwares\anaconda3\python  
-
-      ```
-	  echo %SPARK_HOME%
-	  echo %HADOOP_HOME%
-	  echo %PYSPARK_PYTHON%
-      ```	  
-
-4.  REPL setup For Scala 
-
-      Open cmd and type 
-
-      `spark-shell`
-
-5.  REPL setup For Pyspark  
-    
-      Open cmd and type 
-
-      `pyspark`	
-	  
-6.  PyCharm IDE 
-
-      * Open sample project in repo 01-HelloSpark 
-	   
-	  * C:\Demo\01-HelloSpark
-	  
-	  * Preferences > Setting > Project: 01-HelloSpark > Python Interpretor 
-	  
-	      - Set Python Interpretor to No Interpretor (if pycharm has already automatically picked up some interpretor)
-		   
-		  -  Start configuring new one  >>>  Add >  Choose Conda Enviroment .
-		      
-			  ```
-				 *  Location -> C:\Softwares\anaconda3\envs\my_pycharm
-			     *  Py Version -> 3.8
-			     *  Conda Executable -> C:\Softwares\anaconda3\Scripts\conda.exe
-			     *  Enable make available for all the projects 
-			   
-			                      Or 
-			   
-			     * Choose existing env (if any)
-			   
-			     * Now add pySpark dependency 
-			   
-			         -- Setting > Project: 01-HelloSpark > Python Interpretor> + (Click Plus icon)
-				     -- Type "pyspark" (choose latest version) and click the install button 
-					  
-	          ```
+       ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_data_sources_and_sinks1.jpg?raw=true)
 			  
-			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_image1.jpg?raw=true)
-			  
-	  *  Open HelloSpark.py and Try Run it 
-	      
-		  (RUN ENV -> Config as in below) 
-		  
-		  
-		  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/pycharm_setup_helloworld_run_arguments.jpg?raw=true)
-		 
-	
-      * Setting Logs
-           
-		   * Open C:\Softwares\spark3\conf and rename spark-defaults.config.template -> spark-defaults.config
-		   
-		   * Copy paste content from repo conf/spark-defaults.config 
-		   
-		   * Run again.
-		    
 
-7.  Jupyter Notebook 
 
-      ```
-	   
-	  1. Set env --SPARK_HOME=C:\Softwares\spark3 
-	  
-	  2. Open Anaconda prompt and install find spark 
+2.  Internal Sources And Dataframe Reader
+
+      *  General Structure 
+      
+          ```
+          DataFrameReader
+		   .format(...)
+		   .option('key', 'value')
+		   .schema(...)
+		   .load
+          ```	
+		
+	  *  Format 
+          
+		   ```
+		    Build in Format -> csv , json , parquet , orc jdbc
+			Community Format -> avro , mongodb , cassandra , xml , hbase , redshift etc 
+           ```		  
+		
+	  *  Options - Read Mode
+
+           ```
+            1. Permissive    [places corrupted row in a column - "_CORRUPT_RECORD
+		    2. Drop Malformed
+		    3. Fail Fast
+           ```
+		  
+	  *  Schema 
 	       
-		    python -m pip install findspark
+		   ```  
+           Explicit  
+           Implicit		   
+           ```
+      *  Egs: 
+
+          ```
+		  FlightTimeCsvDF = spark.read \
+						.format("csv") \
+						.option("header", "true") \
+						.option("inferSchema", "true")
+						.data("data/flight*.csv")
+		  
+		  FlightTimeJsonDF = spark.read \
+						.format("json") \
+						.option("inferSchema", "true")
+						.data("data/flight*.json")
+						
+		
+          FlightTimeParquetDF = spark.read \
+						.format("parquet") \
+						.option("inferSchema", "true")
+						.data("data/flight*.parquet")		
+						
+          
+          ```		  
+	  
+	  * Print Schema 
+	  
+          ```
+          
+		  Eg 
+		  
+		  logger.info( "Schema :" + FlightTimeParquetDF.schmea.simpleString())
+		  
+          ```		  
+	  
+        	  
+	  
+3.  Spark Data Types 
+    
+      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_datatypes_to_python.jpg?raw=true)
+	  
+
+4.  Creating Spark DF Schemas
+
+      -  Programmatically [StructType]
+	  -  Using DDL String
+
+      ```
+	  
+	    1. Programmatically 
+	  
+			flightSchemaStruct = StructType([
+				StructField("FL_DATE", DateType()),
+				StructField("OP_CARRIER", StringType()),
+				StructField("OP_CARRIER_FL_NUM", IntegerType()),
+				StructField("ORIGIN", StringType()),
+				StructField("ORIGIN_CITY_NAME", StringType()),
+				StructField("DEST", StringType()),
+				StructField("DEST_CITY_NAME", StringType()),
+				StructField("CRS_DEP_TIME", IntegerType()),
+				StructField("DEP_TIME", IntegerType()),
+				StructField("WHEELS_ON", IntegerType()),
+				StructField("TAXI_IN", IntegerType()),
+				StructField("CRS_ARR_TIME", IntegerType()),
+				StructField("ARR_TIME", IntegerType()),
+				StructField("CANCELLED", IntegerType()),
+				StructField("DISTANCE", IntegerType())
+			])
 			
-	  3. Open jupyter notebook and create new notebook 
+			
+			flightTimeCsvDF = spark.read \
+								.format("csv") \
+								.option("header", "true") \
+								.schema(flightSchemaStruct) \
+								.option("mode", "FAILFAST") \
+								.option("dateFormat", "M/d/y") \                     # -> we need to specify the date or datetime format
+								.load("data/flight*.csv")
+								
+		    
+			logger.info("CSV Schema:" + flightTimeCsvDF.schema.simpleString())
+			
+        2. DDL String 
 
-               import findspark 
-			 findspark.init()
-			 
-			 
-			 import pyspark 
-			 from  pysparl.sql  import SparkSession 
-			 
-			 spark = SparkSession.builder.getOrCreate()
-			 
-			 spark.read.json("C:\demo\notebook\data\people.json").show()
-			 
-	  ```		 
-          		  
+            flightSchemaDDL = """FL_DATE DATE, OP_CARRIER STRING, OP_CARRIER_FL_NUM INT, ORIGIN STRING, 
+								ORIGIN_CITY_NAME STRING, DEST STRING, DEST_CITY_NAME STRING, CRS_DEP_TIME INT, DEP_TIME INT, 
+								WHEELS_ON INT, TAXI_IN INT, CRS_ARR_TIME INT, ARR_TIME INT, CANCELLED INT, DISTANCE INT"""	
 
-      		   
+
+            flightTimeJsonDF = spark.read \
+								.format("json") \
+								.schema(flightSchemaDDL) \
+								.option("dateFormat", "M/d/y") \
+								.load("data/flight*.json")
+
+            logger.info("Parquet Schema:" + flightTimeParquetDF.schema.simpleString())								
+
+      ```	  
+		
+
+   
          		 
 			   
 			   
