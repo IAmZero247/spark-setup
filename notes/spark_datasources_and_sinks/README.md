@@ -219,7 +219,7 @@
 
 		partitionedDF = flightTimeParquetDF.repartition(5)
 		logger.info("Num Partitions after: " + str(partitionedDF.rdd.getNumPartitions()))
-		partitionedDF.groupBy(spark_partition_id()).count().show()				 <--- this give data is distributed over available partition
+		partitionedDF.groupBy(spark_partition_id()).count().show()	         <--- this give data is distributed over available partition
 
       ```
 	  
