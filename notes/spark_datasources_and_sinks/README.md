@@ -263,6 +263,43 @@
           1.  Managed Tables [Supports Bucketing , Sorting]
 		      
 			    ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_managed_tables.jpg?raw=true)
+				
+				
+				
+				
+			  ```
+			  
+			    spark = SparkSession \
+							.builder \
+							.master("local[3]") \
+							.appName("SparkSQLTableDemo") \
+							.enableHiveSupport() \          <----- Enable Hive Support is needed
+							.getOrCreate()
+							
+			    flightTimeParquetDF = spark.read \
+									.format("parquet") \
+									.load("dataSource/")
+
+			    spark.sql("CREATE DATABASE IF NOT EXISTS AIRLINE_DB") 
+			    spark.catalog.setCurrentDatabase("AIRLINE_DB")      <---- current database
+
+			    flightTimeParquetDF.write \
+				        .format("csv)
+						.mode("overwrite") \
+						.bucketBy(5 , "OP_CARRIER", "ORIGIN")
+						.saveAsTable("flight_data_tbl")
+
+                logger.info(spark.catalog.listTables("AIRLINE_DB"))
+				
+				
+				NOTES:
+				 1. Files will be saved to spark.sql.warehouse.dir
+				 2. Bucketing limit no of partition to fixed.
+				 3. For local - metastore db and spark warehouse will be set in project folder itself.
+				 4. In cluster , admin config both metastore and warehouse.
+              ```
+
+              ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_managed_table_with_bucketing.jpg?raw=true)			  
 			   
           2.  Unmanaged (External Tables) [ Doesnt support Bucketing ]
 		  
