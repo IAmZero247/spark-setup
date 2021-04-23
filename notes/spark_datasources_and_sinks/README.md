@@ -223,11 +223,13 @@
 
       ```
 	  
-    	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_data_sources_and_sinks1.jpg?raw=true)
+    	
 	
 	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions.jpg?raw=true)
 		
-		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions_data_created.jpg?raw=true)
+	
+	
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions_data_created.jpg?raw=true)
 	  
 6.  Partition By :  (Shuffling Involves) 
 
