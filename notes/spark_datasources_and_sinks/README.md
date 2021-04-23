@@ -287,6 +287,7 @@
 				        .format("csv)
 						.mode("overwrite") \
 						.bucketBy(5 , "OP_CARRIER", "ORIGIN")
+						.sortBy("OP_CARRIER", "ORIGIN")
 						.saveAsTable("flight_data_tbl")
 
                 logger.info(spark.catalog.listTables("AIRLINE_DB"))
