@@ -248,9 +248,15 @@
 	  
 7.  Spark Databases and Tables 
       
-	  -  Overview 
+	  -  Overview [Similiar to Hive]
 	  
 		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_database_and_tables.jpg?raw=true)
+		   
+	  -  Spark Tables Vs Dataframe 
+	  
+	       * Spark Tables are accessible by ETL tools, where as dataframe are not 
+
+           ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_vs_dataframe.jpg?raw=true)	  
     
       -  Tables
 	  
