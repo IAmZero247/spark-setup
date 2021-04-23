@@ -1,4 +1,4 @@
-# spark-setup
+# Spark Data Sources And Sink 
 
 
 1.  Spark Sources - External And Internal 
@@ -80,7 +80,7 @@
       ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_datatypes_to_python.jpg?raw=true)
 	  
 
-4.  Creating Spark DF Schemas
+4.  Creating Spark DF Schemas [ Explicit ]
 
       -  Programmatically [StructType]
 	  -  Using DDL String
