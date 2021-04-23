@@ -29,7 +29,7 @@
 	  *  Options - Read Mode
 
            ```
-            1. Permissive    [places corrupted row in a column - "_CORRUPT_RECORD
+            1. Permissive    [places corrupted row in a column - "_CORRUPT_RECORD"
 		    2. Drop Malformed
 		    3. Fail Fast
            ```
@@ -113,7 +113,7 @@
 						.option("header", "true") \
 						.schema(flightSchemaStruct) \
 						.option("mode", "FAILFAST") \
-						.option("dateFormat", "M/d/y") \                     # -> we need to specify the date or datetime format
+						.option("dateFormat", "M/d/y") \             # -> we need to specify the date or datetime format
 						.load("data/flight*.csv")
 								
 		    
@@ -221,7 +221,8 @@
 		logger.info("Num Partitions after: " + str(partitionedDF.rdd.getNumPartitions()))
 		partitionedDF.groupBy(spark_partition_id()).count().show()				 <--- this give data is distributed over available partition
 
-      ```	   
+      ```
+	  
     	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions.jpg?raw=true)
 		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions_data_created.jpg?raw=true)
 	  
@@ -243,13 +244,14 @@
 7.  Spark Databases and Tables 
       
 	  -  Overview 
-	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_database_and_tables.jpg?raw=true)
+	  
+		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_database_and_tables.jpg?raw=true)
     
       -  Tables
 	  
           1.  Managed Tables [Supports Bucketing , Sorting]
 		      
-			   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_managed_tables.jpg?raw=true)
+			    ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_managed_tables.jpg?raw=true)
 			   
           2.  Unmanaged (External Tables) [ Doesnt support Bucketing ]
 		  
