@@ -136,12 +136,125 @@
 
       ```	  
 		
+2.  Dataframe Writer
 
+      *  General Struture 
+
+           ```
+		   DataFrameWriter
+		      .format(...)
+			  .option(...)
+			  .partitionBy(...)
+			  .bucketBy(...)
+			  .sortBy(...)
+			  .maxRecordsPerFile(.)
+			  .save()
+            
+           ```			
    
-         		 
-			   
-			   
-			   
+      *  Options - Save Mode   		 
+		   
+           ```
+		   1. Append
+		   2. Overwrite
+		   3. ErrorIfExists
+		   4. Ignore
+           ```
+		   
+	  *  Spark File Layout 	
+         
+           ```
+		   1. No of files and file size
+		   
+		       Default behaviour is 1 output file per partition
+               
+               if we need more partition (3 ways a* , b* , c*)
+                        We cane use DataFrame.repartition(n) transformation method	(a*)
+                        
+                        < NOTE: 1. Blind repartition wont help for most of pratical solution
+						        however help in parallel processing
+							   
+							    2. Wont help in partition elimination
+							   > 
+						
+		   2. Partitions and Buckets 
+		        
+				Key based partition is a powerful way of breaking data logically (b*)
+				
+				Partition data into fixed number of buckets (c*)
+				
+		   3. Sorted Data 
+           ```	
+4.  Add AVRO support to pyspark  
+
+      ```
+	  conf\spark-defaults.conf
 	  
-    	
-   
+	  add below 
+	  
+	  spark.jars.packages   org.apache.spark:spark-avro_2.11:2.4.5
+      
+      ```	  
+			   
+5.  DataframeWriter Ex: 
+
+      ```
+		 partitionedDF.write \
+			.format("avro") \
+			.mode("overwrite") \
+			.option("path", "dataSink/avro/") \
+			.save()
+      
+      ```	
+
+6.  How to check partitions 
+     
+      ```
+        flightTimeParquetDF = spark.read \
+			.format("parquet") \
+			.load("dataSource/flight*.parquet")
+
+		logger.info("Num Partitions before: " + str(flightTimeParquetDF.rdd.getNumPartitions()))
+		flightTimeParquetDF.groupBy(spark_partition_id()).count().show()         <--- this give data is distributed over available partition
+
+		partitionedDF = flightTimeParquetDF.repartition(5)
+		logger.info("Num Partitions after: " + str(partitionedDF.rdd.getNumPartitions()))
+		partitionedDF.groupBy(spark_partition_id()).count().show()				 <--- this give data is distributed over available partition
+
+      ```	   
+    	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions.jpg?raw=true)
+		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/show_partitions_data_created.jpg?raw=true)
+	  
+6.  Partition By :  (Shuffling Involves) 
+
+
+      ```
+	    flightTimeParquetDF.write \
+        .format("json") \
+        .mode("overwrite") \
+        .option("path", "dataSink/json/") \
+        .partitionBy("OP_CARRIER", "ORIGIN") \
+        .option("maxRecordsPerFile", 10000) \
+        .save()
+	  ```
+	  
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/partition_by.jpg?raw=true)
+	  
+7.  Spark Databases and Tables 
+      
+	  -  Overview 
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_database_and_tables.jpg?raw=true)
+    
+      -  Tables
+	  
+          1.  Managed Tables [Supports Bucketing , Sorting]
+		      
+			   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_managed_tables.jpg?raw=true)
+			   
+          2.  Unmanaged (External Tables) [ Doesnt support Bucketing ]
+		  
+		       ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_tables_external_tables.jpg?raw=true)
+		  
+		  
+		  
+	 
