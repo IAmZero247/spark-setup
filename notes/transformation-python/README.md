@@ -92,15 +92,15 @@
 					my_rdd = cls.spark.sparkContext.parallelize(my_rows, 2)
 					cls.my_df = cls.spark.createDataFrame(my_rdd, my_schema)
 
-                def test_data_type(self):
-						rows = to_date_df(self.my_df, "M/d/y", "EventDate").collect()
-						for row in rows:
-							self.assertIsInstance(row["EventDate"], date)
+                          def test_data_type(self):
+					rows = to_date_df(self.my_df, "M/d/y", "EventDate").collect()
+					for row in rows:
+					    self.assertIsInstance(row["EventDate"], date)
 
-                def test_date_value(self):
-						rows = to_date_df(self.my_df, "M/d/y", "EventDate").collect()
-						for row in rows:
-							self.assertEqual(row["EventDate"], date(2020, 4, 5))
+                          def test_date_value(self):
+					rows = to_date_df(self.my_df, "M/d/y", "EventDate").collect()
+					for row in rows:
+					    self.assertEqual(row["EventDate"], date(2020, 4, 5))
 		  ```
 	  
 
