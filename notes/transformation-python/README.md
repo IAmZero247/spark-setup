@@ -18,7 +18,7 @@
 
       	  
 	      
-	      Sample - RowDemo.py
+	  - Sample - RowDemo.py
 		  
           ```
           
@@ -60,11 +60,12 @@
 		  
           ```		  
 	  
-        	  
+           ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/data_frame_creation.jpg?raw=true)
+	  
 	  
 3.  PyTest Sample  
           
-		  RowDemo_Test.py
+	  - Sample - RowDemo_Test.py
     
           ```
 			from datetime import date
