@@ -87,10 +87,10 @@
 			          .getOrCreate()
 				
 	
-				 my_schema = StructType([StructField("ID", StringType()),StructField("EventDate", StringType())])
+				  my_schema = StructType([StructField("ID", StringType()),StructField("EventDate", StringType())])
 				 
 
-				 my_rows = [Row("123", "04/05/2020"), Row("124", "4/5/2020"), Row("125", "04/5/2020"), Row("126", "4/05/2020")]
+				  my_rows = [Row("123", "04/05/2020"), Row("124", "4/5/2020"), Row("125", "04/5/2020"), Row("126", "4/05/2020")]
 			         my_rdd = cls.spark.sparkContext.parallelize(my_rows, 2)
 			         cls.my_df = cls.spark.createDataFrame(my_rdd, my_schema)
 
