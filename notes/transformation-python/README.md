@@ -99,5 +99,24 @@
 				    for row in rows:
 			               self.assertEqual(row["EventDate"], date(2020, 4, 5))
 		  ```
-	  
+
+4.  Unstructered Data to Structured - Eg - Apache Standard Logs	  
+
+      - LogFileDemo.py 
+	      
+		  ```
+		   file_df = spark.read.text("data/apache_logs.txt")
+           file_df.printSchema()
+
+           log_reg = r'^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+) (\S+) (\S+)" (\d{3}) (\S+) "(\S+)" "([^"]*)'
+
+           logs_df = file_df.select(regexp_extract('value', log_reg, 1).alias('ip'),
+                             regexp_extract('value', log_reg, 4).alias('date'),
+                             regexp_extract('value', log_reg, 6).alias('request'),
+                             regexp_extract('value', log_reg, 10).alias('referrer'))
+		  ```
+		  
+		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/logfile_data_sample.jpg?raw=true)
+		 
+        
 
