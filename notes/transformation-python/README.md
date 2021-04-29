@@ -134,11 +134,11 @@
 
       ```
       airlinesDF = spark.read \
-						.format("csv") \
-						.option("header", "true") \
-						.option("inferSchema","true") \
-						.option("samplingRatio", "0.0001") \
-						.load("/databricks-datasets/airlines/part-00000")
+				.format("csv") \
+				.option("header", "true") \
+				.option("inferSchema","true") \
+				.option("samplingRatio", "0.0001") \
+				.load("/databricks-datasets/airlines/part-00000")
 						
 		
       # Column String
