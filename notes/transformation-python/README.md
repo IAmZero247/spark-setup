@@ -128,6 +128,47 @@
 		  ```
 		  
 		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/logfile_data_sample.jpg?raw=true)
+		   
+5.  Working with Dataframe Column - Column String And Column Object 
+
+
+      ```
+      airlinesDF = spark.read \
+						.format("csv") \
+						.option("header", "true") \
+						.option("inferSchema","true") \
+						.option("samplingRatio", "0.0001") \
+						.load("/databricks-datasets/airlines/part-00000")
+						
+		
+      # Column String
+	  airlinesDF.select("Origin", "Dest", "Distance" ).show(10)
+      
+	  # Column Object 
+      from pyspark.sql.functions import *
+	  airlinesDF.select(column("Origin"), col("Dest"), airlinesDF.Distance).show(10)
+
+      # Mixing Both 
+      airlinesDF.select(column("Origin"), col("Dest"), "Distance").show(10)	  
+	  
+	  
+						
+      ```
+
+6.  Column Expressions String/SQL Expressions And Column Object Expressions	
+
+      ```
+       airlinesDF.select("Origin", "Dest", "Distance", "Year","Month","DayofMonth").show(10)
+	   
+	   #Column String Expression - Add dateColumn using to_date sql function
+	   1.  airlinesDF.select("Origin", "Dest", "Distance", expr("to_date(concat(Year,Month,DayofMonth),'yyyyMMdd') as FlightDate")).show(10)
+	   2.  airlinesDF.selectExpr("Origin", "Dest", "Distance", "to_date(concat(Year,Month,DayofMonth),'yyyyMMdd') as FlightDate").show(10)
+	   
+	   #Column Object Expression - Add dateColumn using to_date sql function
+	      from pyspark.sql.functions import *
+	   1. airlinesDF.select(column("Origin"), column("Dest"), column("Distance"), to_date(concat("Year","Month","DayofMonth"),"yyyyMMdd").alias("FlightDate")).show(10)
+	   2. airlinesDF.select("Origin", "Dest", "Distance", to_date(concat("Year","Month","DayofMonth"),"yyyyMMdd").alias("FlightDate")).show(10)
+      ```	   
 		 
         
 
