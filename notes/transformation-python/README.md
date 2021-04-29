@@ -114,6 +114,17 @@
                              regexp_extract('value', log_reg, 4).alias('date'),
                              regexp_extract('value', log_reg, 6).alias('request'),
                              regexp_extract('value', log_reg, 10).alias('referrer'))
+							 
+		   logs_df.printSchema()
+
+           #sample spark-sql on logs-df
+           
+           logs_df \
+			.where("trim(referrer) != '-' ") \
+			.withColumn("referrer", substring_index("referrer", "/", 3)) \
+			.groupBy("referrer") \
+			.count() \
+			.show(100, truncate=False)		   
 		  ```
 		  
 		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/logfile_data_sample.jpg?raw=true)
