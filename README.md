@@ -139,7 +139,7 @@
 			   
 	  
 	  
-	  - Open sample project in repo 01-HelloScalaSpark and add below Run Config
+	  - Import sample project in repo SCALA-HelloSpark and add below Run Config
 	    
 		  ```
 		  -Dlog4j.configuration=file:log4j.properties
