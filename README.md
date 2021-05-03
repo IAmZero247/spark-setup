@@ -131,6 +131,27 @@
 	  ```		 
           		  
 
+8.  Scala Setup With IntellijIdea (SBT as Build Tool)
+    
+	  - Installing scala plugin in intellij idea 
+	      
+		  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/intellij_idea_scala_plugin.jpg?raw=true)	   
+			   
+	  
+	  
+	  - Open sample project in repo 01-HelloScalaSpark and add below Run Config
+	    
+		  ```
+		  -Dlog4j.configuration=file:log4j.properties
+		  -Dlogfile.name=hello-spark
+		  -Dspark.yarn.app.container.log.dir=app-logs
+		  ```
+		  
+		  * Make sure the spark-scala version match up in sbt file
+		  
+		  * Run config - Sample
+		  
+		  * Run Config for test class - Sample
       		   
     
 9.  Docker Container 
