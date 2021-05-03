@@ -132,9 +132,17 @@
           		  
 
       		   
-         		 
+    
+9.  Docker Container 
+
+      ```
+	  docker run -it --rm -p 4040:4040 --name spark3.0-centos8 -h localhost learningjournal/spark:spark3.0-centos8
+	  
+	  
+	   * spark-shell
+      ```	  
 			   
-			   
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/docker_spark.jpg?raw=true)	   
 			   
 	  
     	
