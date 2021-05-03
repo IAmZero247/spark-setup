@@ -59,11 +59,11 @@
 	  
 6.  PyCharm IDE 
 
-      * Open sample project in repo 01-HelloSpark 
+      * Open sample project in repo PY-HelloSpark 
 	   
-	  * C:\Demo\01-HelloSpark
+	  * C:\Demo\PY-HelloSpark
 	  
-	  * Preferences > Setting > Project: 01-HelloSpark > Python Interpretor 
+	  * Preferences > Setting > Project: PY-HelloSpark > Python Interpretor 
 	  
 	      - Set Python Interpretor to No Interpretor (if pycharm has already automatically picked up some interpretor)
 		   
@@ -81,7 +81,7 @@
 			   
 			     * Now add pySpark dependency 
 			   
-			         -- Setting > Project: 01-HelloSpark > Python Interpretor> + (Click Plus icon)
+			         -- Setting > Project: PY-HelloSpark > Python Interpretor> + (Click Plus icon)
 				     -- Type "pyspark" (choose latest version) and click the install button 
 					  
 	          ```
