@@ -31,11 +31,11 @@
 	  
 	      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_client_mode.jpg?raw=true)	  
 	  
-	  * Cluster Mode 
+	  * Cluster Mode - Refer [2]
 	  
 	      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_cluster_mode.jpg?raw=true)	
 
-3.  Spark Cluster Managers
+4.  Spark Cluster Managers And Most Common Spark Execution Models 
      
 	  *  local[n]   --> [IDE]
 	       -  n = no of threads
@@ -43,7 +43,12 @@
 		   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_local.jpg?raw=true)
            		   
 	    
-	  * YARN
-	  * K8S
-	  * MESOS
-	  * Standalone
+	  *   YARN
+	  *   K8S
+	  *   MESOS
+	  *   Standalone
+	  
+	  Most Common Spark Execution Models 
+	  
+	       ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
+	  
