@@ -174,6 +174,38 @@
 			   
 	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/docker_spark.jpg?raw=true)	   
 			   
+			   
+10. Zeppelin Notebook
+
+      - Preffered when working with cloudera or hortenworks. 
 	  
-    	
+	  - Zeppelin comes with embedded spark.
+
+      - Download Link 
+        
+          ```
+    		https://zeppelin.apache.org/ 
+		  
+		    Docker - 
+			
+			1. docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.9.0
+			
+			2. To persist logs and notebook directories, use the volume option for docker container.
+			
+			   docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0
+
+		    3. localhost:8080
+			
+			Installation -
+			
+			 Download and Extract , Navigate to bin folder. Run 
+			 
+			 zeppelin.cmd
+			 
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin.jpg?raw=true)
+			 
+			 Wait ....  open localhost:8080
+			 
+		  
+		  ```		
    
