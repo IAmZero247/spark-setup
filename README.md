@@ -148,10 +148,19 @@
 		  ```
 		  
 		  * Make sure the spark-scala version match up in sbt file
+		    
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/sbt_scala_spark_version.jpg?raw=true)	   
+			
 		  
-		  * Run config - Sample
+		  * Run config for HelloSpark.scala - Sample
+		    
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/intellij_idea_main_run_config.jpg?raw=true)	   
+			
 		  
-		  * Run Config for test class - Sample
+		  * Run Config for HelloSparkTest.scala
+		      
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/intellij_idea_test_run_config.jpg?raw=true)	   
+			
       		   
     
 9.  Docker Container 
