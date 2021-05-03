@@ -204,7 +204,7 @@
 		   *  Create Notebook - MyFirstNoteWork
 		   
 		        ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin_note_book.jpg?raw=true)
-           * Create cell and execute. Use sample file from repo [Zeppelin/people.zip]
+           * Create cell and execute. Use sample file from repo [zeppelin/people.zip]
                
 			   ```
 			   val df = spark.read.json("C:\demo\data\people.json")
