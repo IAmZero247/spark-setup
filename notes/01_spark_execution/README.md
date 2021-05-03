@@ -51,4 +51,36 @@
 # Most Common Spark Execution Models 
     
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
+
+1.  Cluster Manager [local[n]] + Execution Mode [Client]
+
+2.  Setting up Spark Cluster - Google Dataproc 
+
+    
+	  - Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
+	    
+		  * Config driver and executor 
+		    
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_1.jpg?raw=true)
+		  
+		  * Config spark version to 2.4 [Advanced Options]
+		  
+		  * Other Components  [ ]
+		  
+		  * Config Storage Bucket
+		  
+		  * Enable scheduled deletion
+		  
+		  * Create
+		  
+		  * Delete 
+    
+
+2   Cluster Manager [YARN] + Execution Mode [Client]
+
+     spark-shell --master yarn  --driver-memory 1G --executor-memory 500M --num-executors 2
+
+    
+
+   eg:  spark-shell  --master local[3] --driver-memory 2G
 	  
