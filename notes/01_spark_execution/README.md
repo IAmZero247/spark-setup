@@ -65,15 +65,27 @@
 		  
 		  * Config spark version to 2.4 [Advanced Options]
 		  
-		  * Other Components  [ ]
+		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_2.jpg?raw=true)
+		  
+		  * Other Components  [ pyspark , notebooks]
+		  
+		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_3.jpg?raw=true)
 		  
 		  * Config Storage Bucket
 		  
+		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_4.jpg?raw=true)
+		  
 		  * Enable scheduled deletion
+		      
+			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_5.jpg?raw=true)
 		  
 		  * Create
+		     
+			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_6.jpg?raw=true)
 		  
 		  * Delete 
+		     
+			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
     
 
 2   Cluster Manager [YARN] + Execution Mode [Client]
