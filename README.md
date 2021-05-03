@@ -197,7 +197,24 @@
 			 
 		  
 		  ```
-          ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin.jpg?raw=true)		  
+          ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin.jpg?raw=true)
+
+      -  Create new Notebook and Test 
+           
+		   *  Create Notebook - MyFirstNoteWork
+		   
+		        ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin_note_book.jpg?raw=true)
+           * Create cell and execute. Use sample file from repo.
+               
+			   ```
+			   val df = spark.read.json("C:\demo\data\people.json")
+			   df.show
+			   
+			   Press Shift+ Enter
+			   ```
+			   
+			   ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/zeppelin_note_book_demo.jpg?raw=true)
+             		   
 
       -  Docker Setup 
         
