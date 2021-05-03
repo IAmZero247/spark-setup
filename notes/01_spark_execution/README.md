@@ -50,5 +50,5 @@
 	  
 # Most Common Spark Execution Models 
     
-    ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
+![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
 	  
