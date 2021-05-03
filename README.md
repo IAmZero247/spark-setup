@@ -1,3 +1,9 @@
+# spark ecosystem 
+
+     ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_ecosystem.jpg?raw=true)
+		 
+
+
 # spark-setup
 
 
