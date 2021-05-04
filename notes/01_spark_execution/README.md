@@ -101,20 +101,25 @@
 	  ssh into master 
 	  
       spark-shell --master yarn  --driver-memory 1G --executor-memory 500M --num-executors 2 ~--executor-core 1
-	  
 	  ```
 	  
-	  *  History Server - shows list of application executed in past + current running application.
-	     From history server click on application id , we can navigate to spark context
+	  ```
+	  History Server
+	  **************
+	  1. Shows list of application executed in past + current running application.
+	  2. From history server click on application id , we can navigate to spark context
+	  ```
 		 
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_history_server_cm_yarn_plus_em_client.jpg?raw=true)
 		 
-	  *  Spark Context - [1 driver + 2 executor ] 
-	     YARN dynamic allocation policy is to release the resource when not doing anything. So one executor is released.
+	  ```
+	  Spark Context - [1 driver + 2 executor ] 
+	  ****************************************
+	  1. YARN dynamic allocation policy is to release the resource when not doing anything. So one executor is released.
+	  ```
 	     
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_context_cm_yarn_plus_em_client.jpg?raw=true)
     
     
 
-3.   eg:  spark-shell  --master local[3] --driver-memory 2G
-	  
+3.  Cluster Manager [YARN] + Execution Mode [Cluster]
