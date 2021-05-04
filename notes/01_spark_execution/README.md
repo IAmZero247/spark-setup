@@ -110,7 +110,7 @@
 	  2. From history server click on application id , we can navigate to spark context
 	  ```
 		 
-            ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_history_server_cm_yarn_plus_em_client.jpg?raw=true)
+          ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_history_server_cm_yarn_plus_em_client.jpg?raw=true)
 		 
 	  ```
 	  Spark Context - [1 driver + 2 executor ] 
