@@ -95,7 +95,7 @@
 			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
     
 
-2   Cluster Manager [YARN] + Execution Mode [Client]
+3.   Cluster Manager [YARN] + Execution Mode [Client]
     
       ```
 	  ssh into master 
