@@ -79,39 +79,41 @@
 
 # Setting up Spark Cluster - Google Dataproc 
 
-     
-    Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
+Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
 	    
-	  * Config driver and executor 
+  * Config driver and executor 
 		    
-		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_1.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_1.jpg?raw=true)
 		  
-	  * Config spark version to 2.4 [Advanced Options]
+  * Config spark version to 2.4 [Advanced Options]
 		  
-		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_2.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_2.jpg?raw=true)
 		  
-		* Other Components  [ pyspark , notebooks]
+  * Other Components  [ pyspark , notebooks]
 		  
-		    ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_3.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_3.jpg?raw=true)
 		  
-		  * Config Storage Bucket
+  * Config Storage Bucket
 		  
-		      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_4.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_4.jpg?raw=true)
 		  
-		  * Enable scheduled deletion
+  * Enable scheduled deletion
 		      
-			  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_5.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_5.jpg?raw=true)
 		  
-		  * Create
+  * Create
 		     
-			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_6.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_6.jpg?raw=true)
 		  
-		  * Delete 
+  * Delete 
 		     
-			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
+	![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
     
 
-#   Spark Shell -> Cluster Manager [YARN] + Execution Mode [Client]
+# Spark Shell -> Cluster Manager [YARN] + Execution Mode [Client]
+
+
+1.  Command Sample
     
       ```
 	  ssh into master 
@@ -119,6 +121,10 @@
       spark-shell --master yarn  --driver-memory 1G --executor-memory 500M --num-executors 2 ~--executor-core 1
 	  ```
 	  
+	 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_cm_yarm_em_client.jpg?raw=true)
+
+2.  History Server	& Spark Context
+
 	  ```
 	  History Server
 	  **************
@@ -126,7 +132,7 @@
 	  2. From history server click on application id , we can navigate to spark context
 	  ```
 		 
-      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_history_server_cm_yarn_plus_em_client.jpg?raw=true)
+      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_spark_history_server_cm_yarn_plus_em_client.jpg?raw=true)
 		 
       ```
 	  Spark Context - [1 driver + 2 executor ] 
@@ -134,12 +140,13 @@
 	  1. YARN dynamic allocation policy is to release the resource when not doing anything. So one executor is released.
 	  ```
 	     
-      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_context_cm_yarn_plus_em_client.jpg?raw=true)
+      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_spark_context_cm_yarn_plus_em_client.jpg?raw=true)
     
     
 
 #   Spark Submit -> Cluster Manager [YARN] + Execution Mode [Cluster]
 
+1.  Command Sample
 
       ```
 	  ssh into master 
