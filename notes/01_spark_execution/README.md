@@ -52,7 +52,7 @@
     
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
 
-1.  Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
+#  Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
 
       ```
 	  open spark-shell 
@@ -66,12 +66,15 @@
       ```
 	  spark context -
 	  1. In local cluster every thing is handled by driver. every thing run in single JVM.
-      2.  Event timeline shows one executor driver. (figure 1)
-      3. show one driver with3 cores (3 threads)	  
+      2. Event timeline shows one executor driver. (figure 1)
+      3. Figure 2 shows one driver with3 cores (3 threads)	  
 	  ```
 	  
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_cm_local_em_client2.jpg?raw=true)
+      ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_cm_local_em_client3.jpg?raw=true)
+    
 
-2.  Setting up Spark Cluster - Google Dataproc 
+#   Setting up Spark Cluster - Google Dataproc 
 
     
 	  - Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
@@ -105,7 +108,7 @@
 			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
     
 
-3.   Spark Shell -> Cluster Manager [YARN] + Execution Mode [Client]
+#   Spark Shell -> Cluster Manager [YARN] + Execution Mode [Client]
     
       ```
 	  ssh into master 
@@ -132,7 +135,7 @@
     
     
 
-4.  Spark Submit -> Cluster Manager [YARN] + Execution Mode [Cluster]
+#   Spark Submit -> Cluster Manager [YARN] + Execution Mode [Cluster]
 
 
       ```
