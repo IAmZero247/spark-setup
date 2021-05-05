@@ -148,6 +148,7 @@ Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName
 
 1.  Command Sample
 
+
       ```
 	  ssh into master 
 	  
