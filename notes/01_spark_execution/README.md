@@ -52,7 +52,7 @@
     
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
 
-#  Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
+#   Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
 
       ```
 	  open spark-shell 
