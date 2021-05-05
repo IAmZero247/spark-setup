@@ -146,10 +146,9 @@ Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName
 
 #   Spark Submit -> Cluster Manager [YARN] + Execution Mode [Cluster]
 
-1.  Command Sample
+Command Sample
 
-
-      ```
+  ```
 	  ssh into master 
 	  
 	  copy/upload sample project from spark.
@@ -163,8 +162,8 @@ Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName
 	  Watch below figures: 
 	  1. spark submit command and output
 	  2. spark context from spark history server
-	  ```
+  ```
 	  
-	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit1.jpg?raw=true)
+  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit1.jpg?raw=true)
 	  
-	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit2.jpg?raw=true)
+  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit2.jpg?raw=true)
