@@ -80,15 +80,15 @@
 # Setting up Spark Cluster - Google Dataproc 
 
      
-    - Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
+    Navigate Google Dataproc >>> Cluster >>> Create Cluster >>> GiveName 
 	    
-	    * Config driver and executor 
+	  * Config driver and executor 
 		    
-			![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_1.jpg?raw=true)
+		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_1.jpg?raw=true)
 		  
-		* Config spark version to 2.4 [Advanced Options]
+	  * Config spark version to 2.4 [Advanced Options]
 		  
-		    ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_2.jpg?raw=true)
+		![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_2.jpg?raw=true)
 		  
 		* Other Components  [ pyspark , notebooks]
 		  
