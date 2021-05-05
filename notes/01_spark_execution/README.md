@@ -54,12 +54,22 @@
 
 1.  Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
 
-     ```
+      ```
 	  open spark-shell 
 	  
       spark-shell --master local[3]  --driver-memory 2G 
 	  
 	  ```
+	  
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_shell_cm_local_em_client1.jpg?raw=true)
+    
+      ```
+	  spark context -
+	  1. In local cluster every thing is handled by driver. every thing run in single JVM.
+      2.  Event timeline shows one executor driver. (figure 1)
+      3. show one driver with3 cores (3 threads)	  
+	  ```
+	  
 
 2.  Setting up Spark Cluster - Google Dataproc 
 
