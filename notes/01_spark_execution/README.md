@@ -123,3 +123,24 @@
     
 
 4.  Cluster Manager [YARN] + Execution Mode [Cluster]
+
+
+      ```
+	  ssh into master 
+	  
+	  copy/upload sample project from spark.
+	  
+	  scala ? 
+	  spark-submit --master yarn  --deploy-mode cluster --class org.apache.spark.examples.SparkPi spark-examples_2.11-2.4.5.jar 100 
+	  
+	  python 
+	  spark-submit --master yarn  --deploy-mode cluster pi.py 100 
+	  
+	  Watch below figures: 
+	  1. spark submit command and output
+	  2. spark context from spark history server
+	  ```
+	  
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit1.jpg?raw=true)
+	  
+	  ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/spark_submit2.jpg?raw=true)
