@@ -52,7 +52,7 @@
     
 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/most_common_spark_execution_models.jpg?raw=true)
 
-1.  Cluster Manager [local[n]] + Execution Mode [Client]
+1.  Spark Shell -> Cluster Manager [local[n]] + Execution Mode [Client]
 
      ```
 	  open spark-shell 
@@ -95,7 +95,7 @@
 			 ![alt text](https://github.com/IAmZero247/spark-setup/blob/main/repo_images/google_proc_7.jpg?raw=true)
     
 
-3.   Cluster Manager [YARN] + Execution Mode [Client]
+3.   Spark Shell -> Cluster Manager [YARN] + Execution Mode [Client]
     
       ```
 	  ssh into master 
@@ -122,7 +122,7 @@
     
     
 
-4.  Cluster Manager [YARN] + Execution Mode [Cluster]
+4.  Spark Submit -> Cluster Manager [YARN] + Execution Mode [Cluster]
 
 
       ```
@@ -133,7 +133,7 @@
 	  scala ? 
 	  spark-submit --master yarn  --deploy-mode cluster --class org.apache.spark.examples.SparkPi spark-examples_2.11-2.4.5.jar 100 
 	  
-	  python 
+	  python ?
 	  spark-submit --master yarn  --deploy-mode cluster pi.py 100 
 	  
 	  Watch below figures: 
